@@ -33,6 +33,7 @@ def logoutadmin(request):
 	
 def addpizza(request):
 	#write a code to add the pizza into the database
+
 	name=request.POST['pizza']
 	price=request.POST['price']
 	PizzaModel(name=name,price=price).save()
@@ -58,7 +59,7 @@ def signupuser(request):
 	CustomerModel(userid=User.objects.all()[int(lastobject)].id,phoneno=phoneno).save()
 	messages.add_message(request,messages.ERROR,"user successful created")
 	return redirect('homepage')
-
+#UserLogin
 def userloginview(request):
 	return render(request,"pizzaapp/userlogin.html")
 	
