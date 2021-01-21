@@ -18,6 +18,6 @@ urlpatterns = [
 	path('placeorder/',placeorder),
 	path('userorders/',userorders),
 	path('adminorders/',adminorders),
-	path('acceptorder/,<int:orderpk>/',acceptorder),
-	path('declineorder/,<int:orderpk>/',declineorder),
+	path('acceptorder/<int:orderpk>/',acceptorder),
+	path('declineorder/<int:orderpk>/',declineorder),
 ]
